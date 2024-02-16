@@ -1,0 +1,368 @@
+<?php
+include 'db_connect.php';
+?>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <title>Ghumakkad</title>
+</head>
+
+<body>
+<div class="topnav" id="navbar">
+    <ul>
+        <li><a id="logo" href="#"><span>G</span>humakkad</a></li>
+        <li><a href="#">Home</a></li>
+        <li class="dropdown">
+            <a href="#">Destinations</a>
+            <div class="dropdown-content">
+                <div class="destinations-column">
+                    <h4>West India</h4>
+                    <a href="Westindia.html?section=one">Goa</a>
+                    <a href="Westindia.html?section=two">Gujarat</a>
+                    <a href="Westindia.html?section=three">Maharastra</a>
+                </div>
+                <div class="destinations-column">
+                    <h4>East India</h4>
+                    <a href="EastIndia.html?section=one">Sikkim</a>
+                    <a href="EastIndia.html?section=two">Assam</a>
+                    <a href="EastIndia.html?section=three">Nagaland</a>
+                </div>
+                <div class="destinations-column">
+                    <h4>North India</h4>
+                    <a href="NorthIndia.html?section=one">Rajasthan</a>
+                    <a href="NorthIndia.html?section=two">Uttrakhand</a>
+                    <a href="NorthIndia.html?section=three">Uttar Pradesh</a>
+                   
+                </div>
+                <div class="destinations-column">
+                    <h4>South India</h4>
+                    <a href="SouthIndia.html?section=one">Kerela</a>
+                    <a href="SouthIndia.html?section=two">Karnataka</a>
+                    <a href="SouthIndia.html?section=three">Tamil Nadu</a>
+                </div>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="#">Holiday Ideas</a>
+            <div class="dropdown-content">
+                <div class="destinations-column">
+                    <h4>Tourism Destinations by Interest</h4>
+                    <a href="#">Wildlife</a>
+                    <a href="#">Hill station</a>
+                    <a href="#">Beaches</a>
+                </div>
+                <div class="destinations-column">
+                    <h4>Adventure Tourism</h4>
+                    <a href="#">Trekking</a>
+                    <a href="#">River Rafting</a>
+                    <a href="#">Jeep Safari</a>
+                </div>
+                <div class="destinations-column">
+                    <h4>Pilgrimage Tourism</h4>
+                    <a href="#">Hindu</a>
+                    <a href="#">Jain</a>
+                    <a href="#">Buddhism</a>
+                </div>
+            </div>
+        </li>
+
+        <li><a href="#about-us-section" id="about-us-link">About Us</a></li>
+        <li><a href="contectUS.html" id="contact-us-link">Contact Us</a></li>
+        
+        <li>
+            <a href="Login.php" id="login">
+                <i class="fas fa-user"></i> Login/SignUp
+            </a>
+        </li>
+        <li>
+            <a href="Admin.html" id="signup">
+                <i class="fas fa-user-plus"></i>Admin
+            </a>
+        </li>
+        <li><a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a></li>
+    </ul>
+</div>
+
+
+<div class="video-container">
+    <video autoplay loop muted poster="video-poster.jpg">
+        <source src="image/production_id_4133023 (2160p) (1).mp4" type="video/mp4">
+    </video>
+
+    <div class="caption">
+        <h1>Explore the World with Ghumakkad</h1>
+        <p>Your Adventure Awaits - Start Your Journey Today</p>
+    </div>
+    <div class="search-overlay">
+        <input class="search-bar" type="text" placeholder="Search...">
+        <button class="search-button">Search</button>
+    </div>
+</div>
+
+
+
+    <div class="heading">
+        <h1>Best Tourist Places to Visit in the India</h1>
+    </div>
+<div class="package" onmouseover="pauseSlideshow()" onmouseout="resumeSlideshow()">
+    <div class="slides">
+
+    <div class="first-div">
+        <div class="image-container">
+            <img src="image/Bodhgya.jpg" alt="Bihar" width="100%" height="auto">
+            <div class="imagetext">Bihar</div>
+            <div class="content">
+                <p class="price">8 days | 7 night | 5 places</p>
+                <p class="price">Starting at: $1000</p>
+                <p class="additional-info">"Bihar: Where Every Stone Tells a Story."</p>
+                <button><a href="#" class="view-details-link">View Details</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="first-div">
+        <div class="image-container">
+            <img src="image/jodhpur.jpg" alt="Rajasthan"  width="100%" height="auto">
+            <div class="imagetext">Rajasthan</div>
+            <div class="content">
+                <p class="price">9 days | 8 night | 6 places</p>
+                <p class="price">7 places</p>
+                <p class="price">Starting at: $8000</p>
+                <p class="additional-info">"Rajasthan: Where Royalty Meets Timeless Beauty."</p>
+                <button><a href="#" class="view-details-link">View Details</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="first-div">
+        <div class="image-container">
+            <img src="image/kashmir.jpg" alt="kashmir"  width="100%" height="auto">
+            <div class="imagetext">Jammu & kashmir</div>
+            <div class="content">
+                <p class="price">6 days | 5 night | 5 places</p>
+                <p class="price">Starting at: $10000</p>
+                <p class="additional-info">"Kashmir: Paradise Found in Every Season."</p>
+                <button><a href="#" class="view-details-link">View Details</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="first-div">
+        <div class="image-container">
+            <img src="image/Himachal.jpg" alt="Himachal"  width="100%" height="auto">
+            <div class="imagetext">Himachal Pradesh</div>
+            <div class="content">
+                <p class="price">5 days | 4 night | 5 places</p>
+                <p class="price">Starting at: $7000</p>
+                <p class="additional-info">Exploring Himachal Pradesh's Tranquil Charms.</p>
+                <button><a href="#" class="view-details-link">View Details</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="first-div">
+        <div class="image-container">
+            <img src="image/KOLKATA.jpg" alt="westBengal"  width="100%" height="auto">
+            <div class="imagetext">West Bengal</div>
+            <div class="content">
+                <p class="price">8 days | 7 night | 5 places</p>
+                <p class="price">Starting at: $9000</p>
+                <p class="additional-info">"Where Tradition and Modernity Dance in Harmony."</p>
+                <button><a href="#" class="view-details-link">View Details</a></button>
+            </div>
+        </div>
+    </div>
+    <div class="first-div">
+        <div class="image-container">
+            <img src="image/varanashi.jpg" alt="Uttar Pradesh"  width="100%" height="auto">
+            <div class="imagetext">Uttar Pradesh</div>
+            <div class="content">
+                <p class="price">8 days | 7 night | 5 places</p>
+                <p class="price">Starting at: $7000</p>
+                <p class="additional-info">"Where Spiritual Sanctity Meets Timeless Traditions."</p>
+                <button><a href="#" class="view-details-link">View Details</a></button>
+            </div>
+        </div>
+    </div>
+
+    </div>
+</div>
+<hr>
+
+
+
+<div class="heading">
+    <h1>International Holiday Packages</h1>
+ </div>
+    <div class="category">
+       <div class="first">
+        <img src="image/thailand.jpg" alt="Thailand" height="70%" width="50%">
+        <div class="center"><a href="">Thailand</a></div>
+       </div>
+       <div class="first">
+        <img src="image/maladives.jpg" alt="maldives" height="70%" width="50%">
+        <div class="center"><a href="">Maldives</a></div>
+       </div>
+       <div class="first">
+        <img src="image/malaysia.jpg" alt="malaysia" height="70%" width="50%">
+        <div class="center"><a href="">Malaysia</a></div>
+       </div>
+       <div class="first">
+        <img src="image/australia.jpg" alt="Austeailia" height="70%" width="50%">
+        <div class="center"><a href="">Australia</a></div>
+       </div>
+       <div class="first">
+        <img src="image/dubai.jpg" alt="Dubai" height="70%" width="50%">
+        <div class="center"><a href="">Dubai</a></div>
+       </div>
+       <div class="first">
+        <img src="image/Singapore.jpg" alt="singapor" height="70%" width="50%">
+        <div class="center"><a href="">Singapore</a></div>
+       </div>
+       <div class="first">
+        <img src="image/Bhutan.jpg" alt="Bhutan " height="70%" width="50%">
+        <div class="center"><a href="">Bhutan </a></div>
+       </div>
+       <div class="first">
+        <img src="image/nepal.jpg" alt="Nepal" height="70%" width="50%">
+        <div class="center"><a href="">Nepal</a></div>
+       </div>
+    </div>
+
+
+<section class="travel-section">
+    <h1>Travel Information</h1>
+    <div class="travel-card">
+        <div class="card-image">
+            <img src="image/new.jpeg" alt="Travel Destination" >
+        </div>
+        <div class="card-content">
+            <h2 align="center" style="color: aliceblue;">Best Time To Visit In India.</h2>
+            <p>The best time to visit India for holidays depends on the type of experience you seek. The tourism season in India varies across regions due to its diverse climate. The peak tourism season in India starts from September to June. For wildlife enthusiasts, winter is ideal as national parks are open, and wildlife sightings are abundant. Hill stations are most enjoyable during summer to escape the scorching heat of the plains. For trekking and hiking adventures, winter, monsoon, autumn, and spring offer pleasant weather. Plan your trip according to your preferences, and you'll discover India's incredible beauty and cultural richness, making it an unforgettable holiday destination. September to April can be considered an ideal time to explore India for tourism holidays.</p>
+        </div>
+    </div>
+    <div class="travel-card">
+        <div class="card-content">
+            <h2 align="center" style="color: aliceblue;">How to get around in India?</h2>
+            <p>Traveling to India is a seamless experience, thanks to its well-developed transportation network. The country is easily accessible through various modes of transport, ensuring a smooth entry for tourists from around the world. India boasts an extensive road connectivity, making it convenient for travelers to explore different regions. The rail network, with an extensive network of trains, offers a scenic and comfortable journey to various destinations.</p>
+        </div>
+        <div class="card-image">
+            <img src="image/bike.jpeg" alt="Travel Destination" >
+        </div>
+    </div>
+    <div class="travel-card">
+        <div class="card-image">
+            <img src="image/notes.webp" alt="Travel Destination" >
+        </div>
+        <div class="card-content">
+            <h2 align="center" style="color: aliceblue;">Must-Follow Travel Tips for Exploring India</h2>
+            <p>When visiting India, it's essential to check out important travel tips to ensure a smooth and enjoyable trip. Follow recommended guidelines for packing, cultural respect, local transportation, and staying safe. These tips will help you make the most of your India tour and have a memorable experience.
+
+                Research and Plan Ahead: Familiarize yourself with India's culture, climate, and popular destinations. Plan your itinerary well in advance to make the most of your trip.
+                Obtain Necessary Visas: Apply for the appropriate visa type and ensure your passport is valid for at least six months beyond your travel dates.
+                Pack Wisely: Pack lightweight, breathable clothing suitable for the weather. Don't forget essentials like sunscreen, a hat, comfortable footwear, and insect repellent.</p>
+        </div>
+    </div>
+</section>
+
+
+<div class="team-row" > 
+    <h2>Meet Our Ghumakkad Team</h2>
+    <div class="team-column"> 
+       <div class="team-card"> 
+           <img src="image/ceo.webp" alt="Jane" class="team-image">
+        <div class="team-container">
+          <h2>Chhaya</h2>
+          <p class="team-title">CEO & Founder</p> 
+          <p>"Innovative and inspiring CEO at Ghummakkad shapes a new narrative in travel,driven by a  commitment to exceptional experiences."</p>
+          <p>chhayachy618@gmail.com</p>
+          <p><button class="team-button"><a href="contectUS.html">Contact</a></button></p> 
+        </div>
+      </div>
+    </div>  
+    
+    <div class="team-column"> 
+        <div class="team-card"> 
+            <img src="image/software.webp" alt="Jane" class="team-image">
+         <div class="team-container">
+           <h2>Chhaya</h2>
+           <p class="team-title">SoftWare developer</p> 
+           <p>"With a keen eye for detail, I am a software developer designs and implements high-quality, user-centric software solutions."</p>
+           <p>chhaya@gmail.com</p>
+           <p><button class="team-button"><a href="contectUS.html">Contact</a></button></p> 
+         </div>
+       </div>
+     </div>  
+
+     <div class="team-column"> 
+        <div class="team-card"> 
+            <img src="image/manager.webp" alt="Jane" class="team-image">
+         <div class="team-container">
+           <h2>Kawli</h2>
+           <p class="team-title">Manager</p> 
+           <p>I am a visionary leader, guiding and empowering teams towards success with strategic insights and mentorship."</p>
+           <p>kawli@gmail.com</p>
+           <p><button class="team-button"><a href="contectUS.html">Contact</a></button></p> 
+         </div>
+       </div>
+     </div>  
+</div>';'
+  
+
+
+    <div class="heading">
+        <h1>Why Choose Us???</h1>
+    </div>
+    <div class="choose">
+    <div class="card">
+        <img src="image/experience.png" width="40%" height="20%">
+        <h2>20+ Year Experience</h2>
+        <p>Boasting over two decades in the tourism and hospitality industry, Tour My India has amassed invaluable experience that sets us apart</p>
+    </div>
+
+    <div class="card">
+        <img src="image/leader.png" width="40%" height="20%">
+        <h2>A Team of Experts</h2>
+        <p>Our experienced team at Tour My India is more than just proficient; they are destination experts for every location within the mesmerizing landscape of India. Their knowledge is an invaluable asset for every traveler.</p>
+    </div>
+
+    <div class="card">
+        <img src="image/verify.png" width="40%" height="20%">
+        <h2>Verified Hotels</h2>
+        <p>We offer a meticulously selected and verified list of high-grade hotels. Our partners consistently deliver top-notch service, ensuring an exceptional experience for our guests.</p>
+    </div>
+
+    <div class="card">
+        <img src="image/earth.png" width="40%" height="20%">
+        <h2>Value for Money Tours</h2>
+        <p>With Tour My India, your vacation is not just about sightseeing; it's about creating memories that last a lifetime. Our holiday packages are hassle-free and designed with a focus on value for money.</p>
+    </div>
+</div>
+
+
+
+<footer>
+    <div id="about-us-section" class="about-us-section">
+         <div class="footer-content">
+             <div class="about">
+                 <h3 align="center">About Us</h3>
+                 <p>Welcome to Ghummakkad, where wanderlust meets wanderers, and every journey is an unforgettable tale waiting to be told. Our name, "Ghummakkad," captures the essence of our travel philosophy, embracing the spirit of exploration and adventure. We are not just a tour and travel website; we are your companions on the road less traveled, your passport to new experiences, and your bridge to the world's most breathtaking destinations.</p>
+             </div>
+             <div class="address">
+                <h3>Our Address</h3>
+                <p>Boaring Road</p>
+                <p>Patna, Bihar 848101</p>
+                <p>India</p>
+            </div>
+         </div><br><hr>
+         <p align="center">CopyCopyRight&copy; 2023 Ghummakkad</p>
+     </div>
+ </footer> 
+</body>
+</html>
+</body>
+</html>

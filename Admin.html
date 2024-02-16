@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login and Sign Up</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        
+        <h1>Login and Sign Up to Manage Ghumakkad</h1>
+      
+        <div id="login-form" class="form">
+            <h2>Admin Login</h2>
+            <form action=" " method="post">
+                <div class="input-container">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required><br><br>
+                </div>
+                <div class="input-container">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required><br>
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <p><h5>Don't have an account? <a href="#" id="signup-link">Sign Up</a></h5></p>
+        </div>
+		
+        <div id="signup-form" class="form" style="display: none;">
+            <h2>Admin Sign Up</h2>
+            <form action=" " method="post">
+                <div class="input-container">
+                    <input type="text" id="new-username" placeholder="Username" required><br>
+                </div>
+                <div class="input-container">
+                    <input type="email" id="email" placeholder="Email" required><br>
+                </div>
+                <div class="input-container">
+                    <input type="tel" id="phone" placeholder="Phone" required><br>
+                </div>
+                <div class="input-container">
+                    <input type="tel" id="phone" placeholder="Adhar number" required><br>
+                </div>
+
+				<div class="input-container">
+                    <input type="password" id="password" placeholder="Password" required><br>
+                </div>
+                <div class="input-container">
+                    <input type="password" id="password" placeholder="Confirm-password" required><br>
+                </div>
+                <button type="submit">Sign Up</button><br><br>
+            </form>
+            <p><h5>Already have an account? <a href="#" id="login-link">Login</a></h5></p>
+        </div>
+    </div>
+
+    <script>
+        const loginForm = document.getElementById("login-form");
+        const signupForm = document.getElementById("signup-form");
+        const loginLink = document.getElementById("login-link");
+        const signupLink = document.getElementById("signup-link");
+
+        loginLink.addEventListener("click", () => {
+            loginForm.style.display = "block";
+            signupForm.style.display = "none";
+        });
+
+        signupLink.addEventListener("click", () => {
+            loginForm.style.display = "none";
+            signupForm.style.display = "block";
+        });
+    </script>
+</body>
+</html>
